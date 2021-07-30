@@ -67,7 +67,7 @@ def load_data():
     return data
 
 data = load_data()
-
+data[g_vars] = data[g_vars].div(100)
 
 max_date = data[DATE_COLUMN].max()
 min_date = data[DATE_COLUMN].min()
@@ -116,8 +116,11 @@ if st.checkbox('Mostrar datos en tabla'):
     st.subheader('Últimas fechas')
     st.write(plot_data.tail())
 
-
+st.write('Los números mostrados están en cambios porcentuales con respecto a una fecha base, es decir, si el número es 0, no hay diferencias con la fecha base. Si el número es -0.45, el cambio es una caida en la variable de casi la mitad.')
 st.subheader('Gráfico 1')
+
+st.write('- **Change in Movement** nos dice cuanta gente que no vive en la región está de visita.')
+st.write('- **Stay Put** nos dice cuanta gente que vive en la región se quedo todo el día en su casa,')
 fig1 = px.line(plot_data,
                 x='Fecha',
                 y=f_vars_selected,
