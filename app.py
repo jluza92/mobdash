@@ -121,7 +121,7 @@ st.write('Los números mostrados están en cambios porcentuales con respecto a u
 st.subheader('Gráfico 1')
 
 st.write('- **Change in Movement** nos dice cuanta gente que no vive en la región está de visita.')
-st.write('- **Stay Put** nos dice cuanta gente que vive en la región se quedo todo el día en su casa,')
+st.write('- **Stay Put** nos dice cuanta gente que vive en la región se quedo todo el día en su casa.')
 fig1 = px.line(plot_data,
                 x='Fecha',
                 y=f_vars_selected,
@@ -133,6 +133,7 @@ fig1 = px.line(plot_data,
 st.plotly_chart(fig1)
 
 st.subheader('Gráfico 2')
+st.write('- La información de Google nos permite ver los cambios en la movilidad en distintos tipos de lugares: supermercados, farmacias, parques, áreas residenciales, etc.')
 fig2 = px.line(plot_data,
                 x='Fecha',
                 y=g_vars_selected,
