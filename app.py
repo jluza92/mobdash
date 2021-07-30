@@ -67,7 +67,7 @@ def load_data():
     return data
 
 data = load_data()
-data[g_vars] = data[g_vars].div(100)
+#data[g_vars] = data[g_vars].div(100)
 
 max_date = data[DATE_COLUMN].max()
 min_date = data[DATE_COLUMN].min()
