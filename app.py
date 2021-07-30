@@ -64,6 +64,7 @@ DATA_PATH = 'buenosaires.csv'
 def load_data():
     data = pd.read_csv(DATA_PATH, index_col = 0)
     data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN], format = '%Y-%m-%d')
+    data[g_vars] = data[g_vars].astype(float)
     return data
 
 data = load_data()
