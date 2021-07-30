@@ -117,7 +117,7 @@ if st.checkbox('Mostrar datos en tabla'):
     st.subheader('Últimas fechas')
     st.write(plot_data.tail())
 
-st.write('Los números mostrados están en cambios porcentuales con respecto a una fecha base, es decir, si el número es 0, no hay diferencias con la fecha base. Si el número es -0.45, el cambio es una caida en la variable de casi la mitad.')
+st.write('Los números mostrados están en cambios porcentuales con respecto a una fecha base (pre-pandemia), es decir, si el número es 0, no hay diferencias con la fecha base. Si el número es -0.45, el cambio es una caida en la variable de casi la mitad.')
 st.subheader('Gráfico 1')
 
 st.write('- **Change in Movement** nos dice cuanta gente que no vive en la región está de visita.')
